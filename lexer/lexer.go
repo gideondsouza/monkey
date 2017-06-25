@@ -110,6 +110,7 @@ func (l *Lexer) peekChar() byte {
 
 //Lexer is a type that stores the location of
 //where we are right now is has some associated functions.
+//It is our monkey language's lexer.
 type Lexer struct {
 	input        string
 	position     int  // current position in input (points to current char)
