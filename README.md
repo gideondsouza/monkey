@@ -4,7 +4,7 @@ This repo contains an implementation of the monkey language specified by this bo
 
 It is the result of my progress with said book.
 
-Build and Test status : ![Build & Test Status](https://api.travis-ci.org/gideondsouza/monkey.svg?branch=master)
+Build and Test status : [![Build & Test Status](https://api.travis-ci.org/gideondsouza/monkey.svg?branch=master)](https://travis-ci.org/gideondsouza/monkey)
 
 Progress: 
 - [x] Implemented a Lexer. (With tests)
