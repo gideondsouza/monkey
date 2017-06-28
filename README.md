@@ -1,8 +1,8 @@
 # What is this?
 
-This an implementation of the monkey language specified by this book : https://interpreterbook.com/
+This repo contains an implementation of the monkey language specified by this book : https://interpreterbook.com/
 
-This is work in progress, a result of following the book:
+It is the result of my progress with said book.
 
 Progress: 
 - [x] Implemented a Lexer. (With tests)
