@@ -3,3 +3,7 @@ language: go
 go:
   - 1.6.x
   - 1.8.x
+  - release
+
+script:
+ - go test -v ./...
