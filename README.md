@@ -1,4 +1,4 @@
-# Intro
+# What is this?
 
 This an implementation of the monkey language specified by this book : https://interpreterbook.com/
 
@@ -21,12 +21,12 @@ Monkey also supports function literals and we can use them to bind a function to
     // Define a `fibonacci` function
     let fibonacci = fn(x) {
     if (x == 0) {
-        0                // Monkey supports implicit returning of values
+        0            // Monkey supports implicit returning of values
     } else {
         if (x == 1) {
-        return 1;      // ... and explicit return statements
+            return 1;// ... and explicit return statements
         } else {
-        fibonacci(x - 1) + fibonacci(x - 2); // Recursion! Yay!
+            fibonacci(x - 1) + fibonacci(x - 2); // Recursion! Yay!
         }
     }
     };
