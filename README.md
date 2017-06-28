@@ -2,7 +2,13 @@
 
 This an implementation of the monkey language specified by this book : https://interpreterbook.com/
 
-This is work in progress, a result of following the book.
+This is work in progress, a result of following the book:
+
+Progress: 
+- [x] Implemented a Lexer. (With tests)
+- [ ] Implemented Parser (With Tests)
+- [ ] Implemented Evaluation (With Tests)
+- [ ] Additions to the Original
 
 Monkey looks like the following:
 
