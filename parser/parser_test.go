@@ -3,6 +3,7 @@ package parser
 import (
 	"testing"
 
+	"github.com/gideondsouza/monkey/ast"
 	"github.com/gideondsouza/monkey/lexer"
 )
 
@@ -10,7 +11,7 @@ func TestLetStatments(t *testing.T) {
 	input := `
 let x = 5;
 let y = 10;
-let foobar = 838383	
+let foobar = 83838;	
 `
 	l := lexer.New(input)
 	p := New(l)
@@ -34,8 +35,33 @@ let foobar = 838383
 
 	for i, tt := range tests {
 		stmt := program.Statements[i]
-		if !TestLetStatment(t, stmt, tt.expectedIdentifier) {
-
+		if !testLetStatement(t, stmt, tt.expectedIdentifier) {
+			return
 		}
 	}
+}
+
+func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
+	if s.TokenLiteral() != "let" {
+		t.Errorf("s.TokenLiteral not 'let'. got=%q", s.TokenLiteral())
+		return false
+	}
+
+	letStmt, ok := s.(*ast.LetStatement)
+	if !ok {
+		t.Errorf("s not *ast.LetStatement. got=%T", s)
+		return false
+	}
+
+	if letStmt.Name.Value != name {
+		t.Errorf("letStmt.Name.Value not '%s'. got=%s", name, letStmt.Name.Value)
+		return false
+	}
+
+	if letStmt.Name.TokenLiteral() != name {
+		t.Errorf("s.Name not '%s'. got=%s", name, letStmt.Name)
+		return false
+	}
+
+	return true
 }
