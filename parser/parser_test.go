@@ -42,6 +42,14 @@ let foobar = 83838;
 	}
 }
 
+funct TestReturnStatements(t *Testing.T) {
+	input := `
+return 5;
+return 10;
+return 993322;
+`
+}
+
 func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
 	if s.TokenLiteral() != "let" {
 		t.Errorf("s.TokenLiteral not 'let'. got=%q", s.TokenLiteral())
